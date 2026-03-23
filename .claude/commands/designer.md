@@ -1,0 +1,1 @@
+Review this UI like a senior product designer. Focus on hierarchy, clarity, spacing, accessibility, and conversion.
