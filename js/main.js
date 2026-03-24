@@ -110,6 +110,71 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(update);
   }
 
+  // --- Disclaimer Modal (first visit) ---
+  const disclaimerModal = document.getElementById('disclaimerModal');
+  const disclaimerAccept = document.getElementById('disclaimerAccept');
+
+  if (disclaimerModal && !localStorage.getItem('viper_disclaimer_accepted')) {
+    disclaimerModal.classList.remove('hidden');
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        disclaimerModal.classList.add('visible');
+      });
+    });
+    document.body.style.overflow = 'hidden';
+  }
+
+  if (disclaimerAccept) {
+    disclaimerAccept.addEventListener('click', () => {
+      localStorage.setItem('viper_disclaimer_accepted', 'true');
+      disclaimerModal.classList.remove('visible');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        disclaimerModal.classList.add('hidden');
+        // Show cookie banner after disclaimer is dismissed
+        showCookieBanner();
+      }, 300);
+    });
+  }
+
+  // --- Cookie Banner (GDPR) ---
+  const cookieBanner = document.getElementById('cookieBanner');
+  const cookieAccept = document.getElementById('cookieAccept');
+  const cookieManage = document.getElementById('cookieManage');
+
+  function showCookieBanner() {
+    if (cookieBanner && !localStorage.getItem('viper_cookies_accepted')) {
+      cookieBanner.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          cookieBanner.classList.add('visible');
+        });
+      });
+    }
+  }
+
+  // If disclaimer was already accepted, show cookie banner on load (if not yet accepted)
+  if (localStorage.getItem('viper_disclaimer_accepted') && !localStorage.getItem('viper_cookies_accepted')) {
+    showCookieBanner();
+  }
+
+  if (cookieAccept) {
+    cookieAccept.addEventListener('click', () => {
+      localStorage.setItem('viper_cookies_accepted', 'true');
+      cookieBanner.classList.remove('visible');
+      setTimeout(() => cookieBanner.classList.add('hidden'), 400);
+    });
+  }
+
+  if (cookieManage) {
+    cookieManage.addEventListener('click', () => {
+      // For now, treat "manage" same as accept — can be expanded later
+      localStorage.setItem('viper_cookies_accepted', 'preferences');
+      cookieBanner.classList.remove('visible');
+      setTimeout(() => cookieBanner.classList.add('hidden'), 400);
+    });
+  }
+
   // --- Active nav link highlighting ---
   const sections = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
