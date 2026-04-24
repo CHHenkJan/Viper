@@ -7,36 +7,54 @@
   <meta name="description" content="Legal disclaimer for VIPER Signals. Paper trading only. Not financial advice. High risk.">
   <meta name="theme-color" content="#0c0808">
 
+  <link rel="icon" type="image/png" href="assets/viper-logo.png">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- ═══ LOGO SYMBOL ═══ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="viperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff3b3b"/>
+        <stop offset="100%" stop-color="#cc0000"/>
+      </linearGradient>
+      <symbol id="viper-mark" viewBox="0 0 200 200">
+        <rect width="200" height="200" rx="44" fill="url(#viperGrad)"/>
+        <g transform="translate(100,100) scale(5.55) translate(-18,-18)">
+          <path d="M8 18L18 6l10 12-5 2 5 10H8l5-10-5-2z" fill="#0c0808" stroke="#0c0808" stroke-width="0.5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="grid-backdrop" aria-hidden="true"></div>
+
   <!-- ═══ NAVIGATION ═══ -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <span class="logo-icon">
-          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 2L8 18L16 16L14 34L28 14L20 17L18 2Z" fill="#ff3b3b"/>
-          </svg>
+        <span class="logo-tile">
+          <svg width="32" height="32"><use href="#viper-mark"/></svg>
         </span>
-        <span>Viper</span>
+        <span class="logo-word">VIPER</span>
       </a>
 
       <ul class="nav-links">
         <li><a href="index.html#stats">Stats</a></li>
         <li><a href="index.html#method">Method</a></li>
+        <li><a href="index.html#philosophy">Philosophy</a></li>
         <li><a href="index.html#rules">Rules</a></li>
         <li><a href="index.html#products">Products</a></li>
-        <li><a href="rules.html">The 5 Rules</a></li>
         <li><a href="disclaimer.html" class="active">Disclaimer</a></li>
-        <li><a href="index.html#products" class="nav-cta">Get Started</a></li>
+        <li><a href="index.html#products" class="nav-cta">Get Started →</a></li>
       </ul>
 
       <button class="nav-toggle" aria-label="Toggle navigation">
@@ -182,36 +200,34 @@
 
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <span class="logo-icon">
-              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 2L8 18L16 16L14 34L28 14L20 17L18 2Z" fill="#ff3b3b"/>
-              </svg>
+            <span class="logo-tile">
+              <svg width="40" height="40"><use href="#viper-mark"/></svg>
             </span>
-            <span>Viper</span>
+            <span class="logo-word">VIPER</span>
           </a>
           <p>
             High-frequency crypto scalping signals powered by strict technical analysis
             and relentless execution discipline. Paper trading only.
           </p>
           <div class="footer-social">
-            <a href="https://twitter.com/ViperTradingBot" aria-label="Twitter" target="_blank" rel="noopener">𝕏</a>
-            <a href="https://t.me/ViperSignals" aria-label="Telegram" target="_blank" rel="noopener">TG</a>
-            <a href="https://facebook.com/ViperTradingBot" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+            <a href="https://x.com/ViperTheHero" aria-label="X (Twitter)" target="_blank" rel="noopener">𝕏</a>
+            <a href="https://t.me/viperthehero" aria-label="Telegram" target="_blank" rel="noopener">TG</a>
           </div>
         </div>
 
         <div>
-          <h4>Navigate</h4>
+          <h4 class="mono">NAVIGATE</h4>
           <ul class="footer-links">
             <li><a href="index.html#stats">Stats</a></li>
             <li><a href="index.html#method">Method</a></li>
+            <li><a href="index.html#philosophy">Philosophy</a></li>
             <li><a href="index.html#rules">Rules</a></li>
             <li><a href="index.html#products">Products</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Legal</h4>
+          <h4 class="mono">LEGAL</h4>
           <ul class="footer-links">
             <li><a href="disclaimer.html">Disclaimer</a></li>
             <li><a href="rules.html">The 5 Rules</a></li>
@@ -236,7 +252,9 @@
   <!-- ═══ DISCLAIMER MODAL ═══ -->
   <div class="disclaimer-overlay hidden" id="disclaimerModal">
     <div class="disclaimer-modal">
-      <div class="disclaimer-modal-icon">&#9888;&#65039;</div>
+      <div class="disclaimer-modal-icon">
+        <svg width="56" height="56"><use href="#viper-mark"/></svg>
+      </div>
       <h2>Important Notice</h2>
       <p>
         This website provides information about VIPER's paper trading activities

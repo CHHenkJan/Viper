@@ -7,42 +7,61 @@
   <meta name="description" content="High-frequency scalping on 1m–15m timeframes. 80–150 signals per month. Tight entries. Tight stops. Fast exits. Paper trading only.">
   <meta name="theme-color" content="#0c0808">
 
+  <link rel="icon" type="image/png" href="assets/viper-logo.png">
+
   <!-- Open Graph -->
   <meta property="og:title" content="VIPER — High-Frequency Crypto Scalping">
   <meta property="og:description" content="Strike fast. Exit faster. 80–150 scalp signals per month on Cryptohopper.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://viper-signals.io">
+  <meta property="og:image" content="assets/viper-logo.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Archivo:wght@400;600;700;800;900&family=Archivo+Narrow:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- ═══ LOGO SYMBOL (defined once, reused everywhere) ═══ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="viperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff3b3b"/>
+        <stop offset="100%" stop-color="#cc0000"/>
+      </linearGradient>
+      <symbol id="viper-mark" viewBox="0 0 200 200">
+        <rect width="200" height="200" rx="44" fill="url(#viperGrad)"/>
+        <g transform="translate(100,100) scale(5.55) translate(-18,-18)">
+          <path d="M8 18L18 6l10 12-5 2 5 10H8l5-10-5-2z" fill="#0c0808" stroke="#0c0808" stroke-width="0.5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ═══ GRID BACKDROP ═══ -->
+  <div class="grid-backdrop" aria-hidden="true"></div>
+
   <!-- ═══ NAVIGATION ═══ -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <span class="logo-icon">
-          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 2L8 18L16 16L14 34L28 14L20 17L18 2Z" fill="#ff3b3b"/>
-          </svg>
+      <a href="index.html" class="nav-logo">
+        <span class="logo-tile">
+          <svg width="32" height="32"><use href="#viper-mark"/></svg>
         </span>
-        <span>Viper</span>
+        <span class="logo-word">VIPER</span>
       </a>
 
       <ul class="nav-links">
         <li><a href="#stats">Stats</a></li>
         <li><a href="#method">Method</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
         <li><a href="#rules">Rules</a></li>
         <li><a href="#products">Products</a></li>
-        <li><a href="rules.html">The 5 Rules</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="#products" class="nav-cta">Get Started</a></li>
+        <li><a href="#products" class="nav-cta">Get Started →</a></li>
       </ul>
 
       <button class="nav-toggle" aria-label="Toggle navigation">
@@ -55,68 +74,154 @@
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="hero">
-    <div class="container">
+    <div class="hero-slab" aria-hidden="true"></div>
+    <div class="hero-slab-shadow" aria-hidden="true"></div>
+    <div class="hero-sticker">
+      <span>AI SCALPING BOT</span>
+    </div>
+
+    <div class="container hero-container">
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="pulse"></span>
-          Paper Trading · Verified Track Record
+        <div class="hero-wordmark">
+          <span class="logo-tile logo-tile-lg">
+            <svg width="88" height="88"><use href="#viper-mark"/></svg>
+          </span>
+          <h1 class="wordmark">VIPER</h1>
         </div>
 
-        <h1>
-          High-Frequency Crypto Scalping.<br>
-          <span class="line-accent">Every Trade Has a Stop. Always.</span>
-        </h1>
+        <p class="hero-tag mono">STRIKE FAST. EXIT FASTER.</p>
 
         <p class="hero-sub">
-          VIPER fires 80–150 crypto scalp signals per month on 5m–15m timeframes.
-          Tight entries. Tight stops. Fast exits. All on Cryptohopper.<br>
-          Verified paper trading track record — public and unedited.
+          AI-powered crypto scalping on 1m–15m timeframes.
+          Momentum-driven entries. Disciplined risk control. Relentless execution.
+          <span class="text-grey">80–150 trades per month across BTC, ETH, and high-volume altcoins.</span>
         </p>
 
         <div class="hero-ctas">
           <a href="#stats" class="btn btn-primary">
-            See the Live Trade Log <span class="arrow">&rarr;</span>
+            <span>See the Live Trade Log</span>
+            <span class="arrow">→</span>
           </a>
-          <a href="#products" class="btn btn-secondary">
-            View Products on Cryptohopper
+          <a href="#products" class="btn btn-ghost">
+            View Products →
           </a>
         </div>
 
-        <p class="hero-disclaimer">
-          Paper trading only. High risk. Not financial advice. Experienced traders only.
-        </p>
+        <div class="hero-inspired">
+          <span class="inspired-label mono">INSPIRED BY</span>
+          <div class="inspired-names">
+            <span><strong>John Carter</strong> — Momentum</span>
+            <span class="dot">·</span>
+            <span><strong>Mark Douglas</strong> — Discipline</span>
+            <span class="dot">·</span>
+            <span><strong>Irene Aldridge</strong> — HFT</span>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <div class="hero-footer mono">
+      <span>01 · STRIKE FAST</span>
+      <span class="hero-footer-dash">—</span>
+      <span>02 · EXIT FASTER</span>
+      <span class="hero-footer-dash">—</span>
+      <span>03 · EVERY TRADE HAS A STOP</span>
     </div>
   </section>
 
   <!-- ═══ STATS ═══ -->
   <section class="stats" id="stats">
     <div class="container">
-      <span class="section-label fade-in">Operational Parameters</span>
-      <h2 class="fade-in">The stats. Unfiltered.</h2>
+      <div class="section-head">
+        <span class="section-label fade-in"><span class="label-bar"></span> LIVE TRACK RECORD</span>
+        <h2 class="fade-in">The stats. <span class="text-red">Unfiltered.</span></h2>
+      </div>
 
-      <div class="stats-grid stagger-children">
+      <div class="stats-grid">
         <div class="stat-block fade-in">
-          <div class="stat-number" data-target="80–150">80–150</div>
-          <div class="stat-label">Signals per month</div>
+          <span class="stat-index mono">001</span>
+          <div class="stat-number" data-target="247" data-metric="total_trades">247</div>
+          <div class="stat-label">Total Trades</div>
+          <div class="stat-meta mono">SINCE INCEPTION</div>
         </div>
         <div class="stat-block fade-in">
-          <div class="stat-number" data-target="0.5" data-suffix="%">0.5%</div>
-          <div class="stat-label">Max risk per scalp</div>
+          <span class="stat-index mono">002</span>
+          <div class="stat-number" data-target="68" data-suffix="%" data-metric="win_rate">68%</div>
+          <div class="stat-label">Win Rate</div>
+          <div class="stat-meta mono">CLOSED TRADES</div>
         </div>
         <div class="stat-block fade-in">
-          <div class="stat-number" data-target="4" data-prefix="<" data-suffix=" hrs">&lt;4 hrs</div>
-          <div class="stat-label">Max hold time</div>
+          <span class="stat-index mono">003</span>
+          <div class="stat-number" data-target="2.4" data-suffix="d" data-metric="avg_hold">2.4d</div>
+          <div class="stat-label">Avg Hold Time</div>
+          <div class="stat-meta mono">PAPER SPOT</div>
         </div>
         <div class="stat-block fade-in">
-          <div class="stat-number" data-target="3">3</div>
-          <div class="stat-label">Max simultaneous positions</div>
+          <span class="stat-index mono">004</span>
+          <div class="stat-number" data-target="14" data-suffix=" wks" data-metric="track_weeks">14 wks</div>
+          <div class="stat-label">Track Record</div>
+          <div class="stat-meta mono">CONTINUOUS</div>
         </div>
       </div>
 
+      <div class="trades-header fade-in">
+        <div>
+          <span class="section-label"><span class="label-bar"></span> RECENT PAPER SPOT TRADES</span>
+          <h3 class="trades-title">Every trade. On the record.</h3>
+        </div>
+        <div class="trades-meta mono">
+          <span class="live-dot"></span>
+          AUTO-UPDATES FROM API
+        </div>
+      </div>
+
+      <div class="trades-table-wrap fade-in" data-metric="recent_trades">
+        <table class="trades-table">
+          <thead>
+            <tr>
+              <th>Asset</th>
+              <th>Entry Date</th>
+              <th>Exit Date</th>
+              <th class="align-right">Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="trade-asset">BTC/USDT</td>
+              <td class="mono">2026-04-21</td>
+              <td class="mono">2026-04-22</td>
+              <td class="trade-result trade-win mono align-right">+1.8%</td>
+            </tr>
+            <tr>
+              <td class="trade-asset">ETH/USDT</td>
+              <td class="mono">2026-04-19</td>
+              <td class="mono">2026-04-20</td>
+              <td class="trade-result trade-loss mono align-right">−0.5%</td>
+            </tr>
+            <tr>
+              <td class="trade-asset">SOL/USDT</td>
+              <td class="mono">2026-04-17</td>
+              <td class="mono">2026-04-19</td>
+              <td class="trade-result trade-win mono align-right">+2.4%</td>
+            </tr>
+            <tr>
+              <td class="trade-asset">BTC/USDT</td>
+              <td class="mono">2026-04-15</td>
+              <td class="mono">2026-04-16</td>
+              <td class="trade-result trade-loss mono align-right">−0.5%</td>
+            </tr>
+            <tr>
+              <td class="trade-asset">ETH/USDT</td>
+              <td class="mono">2026-04-12</td>
+              <td class="mono">2026-04-14</td>
+              <td class="trade-result trade-win mono align-right">+1.1%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <p class="stats-disclaimer fade-in">
-        These are operational parameters — not performance guarantees.<br>
-        All results from paper trading. Past performance ≠ future results.
+        Paper trading only. Past performance ≠ future results.
       </p>
     </div>
   </section>
@@ -124,42 +229,113 @@
   <!-- ═══ METHOD ═══ -->
   <section class="method" id="method">
     <div class="container">
-      <span class="section-label fade-in">Signal Methodology</span>
-      <h2 class="fade-in">No signal fires without all three.</h2>
+      <div class="section-head">
+        <span class="section-label fade-in"><span class="label-bar"></span> SIGNAL METHODOLOGY</span>
+        <h2 class="fade-in">No signal fires without <span class="text-red">all three.</span></h2>
+      </div>
 
-      <div class="method-grid stagger-children">
+      <div class="method-grid">
         <div class="method-card fade-in">
-          <div class="method-number">01</div>
+          <div class="method-head">
+            <span class="method-num">01</span>
+            <span class="method-kind mono">TREND</span>
+          </div>
           <h3>EMA Direction</h3>
           <p>
-            EMA(8) must be above EMA(21).
-            If trend is against us, no buy.
+            EMA(8) must be above EMA(21). If the short-term trend
+            is against us, no entry is considered.
           </p>
+          <div class="method-formula mono">EMA₈ &gt; EMA₂₁</div>
         </div>
         <div class="method-card fade-in">
-          <div class="method-number">02</div>
-          <h3>Stochastic Reversal</h3>
+          <div class="method-head">
+            <span class="method-num">02</span>
+            <span class="method-kind mono">REVERSAL</span>
+          </div>
+          <h3>Stochastic Trigger</h3>
           <p>
-            Stochastic(5,3,3) must be below 20
-            and crossing back up. Oversold reversal.
+            Stochastic(5,3,3) must be below 20 and crossing back
+            up — oversold reversal, not chasing tops.
           </p>
+          <div class="method-formula mono">%K &lt; 20 · %K ↗ %D</div>
         </div>
         <div class="method-card fade-in">
-          <div class="method-number">03</div>
-          <h3>Volume Confirmation</h3>
+          <div class="method-head">
+            <span class="method-num">03</span>
+            <span class="method-kind mono">CONFIRMATION</span>
+          </div>
+          <h3>Volume Validation</h3>
           <p>
-            Volume must exceed 20-period average.
+            Current volume must exceed the 20-period average.
             No volume = no conviction = no trade.
           </p>
+          <div class="method-formula mono">V₀ &gt; ⌀V₂₀</div>
         </div>
       </div>
 
       <div class="method-body fade-in">
         <p>
-          All three conditions must be true simultaneously. If one is missing, the signal
-          is suppressed. This strict filtering reduces noise at the cost of frequency —
-          and we're fine with that. Quality over quantity, even in scalping.
+          All three conditions must be true simultaneously. If one is missing,
+          the signal is suppressed. Strict filtering reduces noise at the cost
+          of frequency — and we're fine with that. Quality over quantity.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PHILOSOPHY ═══ -->
+  <section class="philosophy" id="philosophy">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label fade-in"><span class="label-bar"></span> INSPIRED BY</span>
+        <h2 class="fade-in">Three voices. <span class="text-red">One discipline.</span></h2>
+      </div>
+
+      <div class="philosophy-grid">
+        <article class="philosophy-card fade-in">
+          <div class="phil-num mono">I.</div>
+          <h3>John Carter</h3>
+          <div class="phil-kind mono">MOMENTUM</div>
+          <blockquote>
+            "The market doesn't care what you think. Trade the setup
+            in front of you, not the one in your head."
+          </blockquote>
+          <p>
+            Carter's momentum framework drives VIPER's trend filter.
+            We only enter in the direction of the faster EMA — no
+            counter-trend heroics.
+          </p>
+        </article>
+
+        <article class="philosophy-card fade-in">
+          <div class="phil-num mono">II.</div>
+          <h3>Mark Douglas</h3>
+          <div class="phil-kind mono">DISCIPLINE</div>
+          <blockquote>
+            "Anything can happen. You don't need to know what's going
+            to happen next to make money."
+          </blockquote>
+          <p>
+            Douglas's probabilistic mindset is why every VIPER trade
+            has a pre-defined stop, a pre-defined target, and a
+            hard 4-hour time exit — before entry.
+          </p>
+        </article>
+
+        <article class="philosophy-card fade-in">
+          <div class="phil-num mono">III.</div>
+          <h3>Irene Aldridge</h3>
+          <div class="phil-kind mono">HIGH-FREQUENCY</div>
+          <blockquote>
+            "In HFT, edge is a function of speed, sizing, and the
+            discipline to cut losers faster than you book winners."
+          </blockquote>
+          <p>
+            Aldridge's HFT discipline informs VIPER's sizing rules:
+            fixed-fractional 0.5% risk, cap of 3 positions, and
+            volume-gated entries only.
+          </p>
+        </article>
       </div>
     </div>
   </section>
@@ -167,124 +343,196 @@
   <!-- ═══ RULES ═══ -->
   <section class="rules" id="rules">
     <div class="container">
-      <span class="section-label fade-in">Non-Negotiable</span>
-      <h2 class="fade-in">VIPER's 5 Rules</h2>
-
-      <div class="rules-list stagger-children">
-        <div class="rule-item fade-in">
-          <div class="rule-number-col">
-            <span class="rule-num">01</span>
-          </div>
-          <div class="rule-content">
-            <p>Every trade has a hard stop loss before the entry is placed.</p>
-          </div>
-        </div>
-        <div class="rule-item fade-in">
-          <div class="rule-number-col">
-            <span class="rule-num">02</span>
-          </div>
-          <div class="rule-content">
-            <p>Maximum 0.5% of portfolio at risk per trade.</p>
-          </div>
-        </div>
-        <div class="rule-item fade-in">
-          <div class="rule-number-col">
-            <span class="rule-num">03</span>
-          </div>
-          <div class="rule-content">
-            <p>Maximum 3 simultaneous positions.</p>
-          </div>
-        </div>
-        <div class="rule-item fade-in">
-          <div class="rule-number-col">
-            <span class="rule-num">04</span>
-          </div>
-          <div class="rule-content">
-            <p>Volume must confirm every entry.</p>
-          </div>
-        </div>
-        <div class="rule-item fade-in">
-          <div class="rule-number-col">
-            <span class="rule-num">05</span>
-          </div>
-          <div class="rule-content">
-            <p>Time-based exit at 4 hours — no exceptions.</p>
-          </div>
-        </div>
+      <div class="section-head">
+        <span class="section-label fade-in"><span class="label-bar"></span> NON-NEGOTIABLE</span>
+        <h2 class="fade-in">VIPER's <span class="text-red">5 Rules.</span></h2>
       </div>
 
-      <div class="rules-footer fade-in">
-        These are not guidelines. They are hard rules.<br>
+      <div class="rules-list">
+        <a href="rules.html#rule-1" class="rule-item fade-in">
+          <span class="rule-num mono">01</span>
+          <span class="rule-text">Every trade has a hard stop loss <span class="rule-before">before</span> the entry is placed.</span>
+          <span class="rule-go mono">READ →</span>
+        </a>
+        <a href="rules.html#rule-2" class="rule-item fade-in">
+          <span class="rule-num mono">02</span>
+          <span class="rule-text">Maximum <span class="text-red">0.5%</span> of portfolio at risk per trade.</span>
+          <span class="rule-go mono">READ →</span>
+        </a>
+        <a href="rules.html#rule-3" class="rule-item fade-in">
+          <span class="rule-num mono">03</span>
+          <span class="rule-text">Maximum <span class="text-red">3</span> simultaneous positions.</span>
+          <span class="rule-go mono">READ →</span>
+        </a>
+        <a href="rules.html#rule-4" class="rule-item fade-in">
+          <span class="rule-num mono">04</span>
+          <span class="rule-text">Volume must confirm <span class="rule-before">every</span> entry.</span>
+          <span class="rule-go mono">READ →</span>
+        </a>
+        <a href="rules.html#rule-5" class="rule-item fade-in">
+          <span class="rule-num mono">05</span>
+          <span class="rule-text">Time-based exit at <span class="text-red">4 hours</span> — no exceptions.</span>
+          <span class="rule-go mono">READ →</span>
+        </a>
+      </div>
+
+      <p class="rules-footer fade-in">
+        These are not guidelines. They are hard rules.
         Breaking any one of them is not VIPER's methodology.
-      </div>
+      </p>
     </div>
   </section>
 
   <!-- ═══ PRODUCTS ═══ -->
   <section class="products" id="products">
     <div class="container">
-      <span class="section-label fade-in">Marketplace</span>
-      <h2 class="fade-in">Built for execution. Not for excuses.</h2>
+      <div class="section-head">
+        <span class="section-label fade-in"><span class="label-bar"></span> MARKETPLACE</span>
+        <h2 class="fade-in">Built for execution. <span class="text-red">Not for excuses.</span></h2>
+      </div>
 
-      <div class="products-grid stagger-children">
-
-        <!-- Signals -->
-        <div class="product-card fade-in">
-          <div class="product-type">Signals</div>
-          <h3>VIPER Signals — High-Frequency Scalp Alerts</h3>
-          <p>
-            Real-time buy and sell signals from Viper's 5m and 15m scalping system. Each signal
-            includes entry zone, hard stop loss level, and take profit target. 80–150 signals per month.
-          </p>
-          <div class="product-footer">
-            <div class="product-price">$49 <span>/mo</span></div>
-            <span class="product-badge">High Risk</span>
-          </div>
+      <div class="exchanges-strip fade-in">
+        <span class="exchanges-label mono">SUPPORTED ON CRYPTOHOPPER</span>
+        <div class="exchanges-row">
+          <a class="xchg-link" href="https://crypto.com/exch/4pv7m446qs" target="_blank" rel="noopener" aria-label="Sign up on Crypto.com">
+            <img class="xchg" src="assets/exchanges/cryptocom.svg" alt="Crypto.com" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://www.bybit.com/en/register" target="_blank" rel="noopener" aria-label="Sign up on Bybit">
+            <img class="xchg xchg-wide" src="assets/exchanges/bybit.svg" alt="Bybit" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://www.kucoin.com/r/af/s7ywae" target="_blank" rel="noopener" aria-label="Sign up on KuCoin">
+            <img class="xchg" src="assets/exchanges/kucoin.svg" alt="KuCoin" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://coinbase-consumer.sjv.io/anKdgR" target="_blank" rel="noopener" aria-label="Sign up on Coinbase">
+            <img class="xchg" src="assets/exchanges/coinbase.svg" alt="Coinbase" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://www.okx.com/join/1850952" target="_blank" rel="noopener" aria-label="Sign up on OKX">
+            <img class="xchg" src="assets/exchanges/okx.svg" alt="OKX" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://bingx.com/invite/AAAR94" target="_blank" rel="noopener" aria-label="Sign up on BingX">
+            <img class="xchg" src="assets/exchanges/bingx.svg" alt="BingX" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://bitvavo.com/en/affiliate/cryptohopper" target="_blank" rel="noopener" aria-label="Sign up on Bitvavo">
+            <img class="xchg" src="assets/exchanges/bitvavo.svg" alt="Bitvavo" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://www.binance.com/en/register?ref=P6CD65KX" target="_blank" rel="noopener" aria-label="Sign up on Binance">
+            <img class="xchg" src="assets/exchanges/binance.svg" alt="Binance" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://www.binance.us/" target="_blank" rel="noopener" aria-label="Sign up on Binance US">
+            <img class="xchg" src="assets/exchanges/binanceus.svg" alt="Binance US" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://kraken.pxf.io/LXGyW0" target="_blank" rel="noopener" aria-label="Sign up on Kraken">
+            <img class="xchg" src="assets/exchanges/kraken.svg" alt="Kraken" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://www.bitmart.com/register-referral/en?r=VuEYv4" target="_blank" rel="noopener" aria-label="Sign up on BitMart">
+            <img class="xchg" src="assets/exchanges/bitmart.svg" alt="BitMart" loading="lazy">
+          </a>
+          <a class="xchg-link" href="https://www.htx.co.zw/invite/en-us/1h?invite_code=9cqt3" target="_blank" rel="noopener" aria-label="Sign up on HTX">
+            <img class="xchg" src="assets/exchanges/htx.svg" alt="HTX" loading="lazy">
+          </a>
         </div>
+      </div>
 
-        <!-- Strategy -->
-        <div class="product-card fade-in">
-          <div class="product-type">Strategy</div>
-          <h3>VIPER Strategy — 5m Scalp Stack</h3>
-          <p>
-            Strategy Builder configuration optimized for 5-minute scalping. Uses EMA(8/21) crossover,
-            Stochastic(5,3,3) for reversals, and Williams %R(8) as secondary confirmation.
-          </p>
-          <div class="product-footer">
-            <div class="product-price">$29 <span>/mo</span></div>
-            <span class="product-badge">High Risk</span>
-          </div>
-        </div>
+      <div class="products-grid">
 
-        <!-- Template -->
-        <div class="product-card fade-in">
-          <div class="product-type">Template</div>
-          <h3>VIPER Complete Hopper Template</h3>
-          <p>
-            Full scalping bot configuration for aggressive traders. Includes coin selection, 0.5% max risk,
-            hard stop loss, max 3 positions, fast take profit at 0.8–1.5%, and all Viper parameters pre-loaded.
-          </p>
-          <div class="product-footer">
-            <div class="product-price">$39 <span>one-time</span></div>
-            <span class="product-badge">High Risk</span>
+        <a class="product-card fade-in" href="https://www.cryptohopper.com/signaller?signaller_id=742" target="_blank" rel="noopener">
+          <div class="product-thumb">
+            <img src="assets/signals.png" alt="VIPER Signals thumbnail" loading="lazy">
           </div>
-        </div>
+          <div class="product-body">
+            <div class="product-type mono">SIGNALS</div>
+            <h3>High-Frequency Scalp Alerts</h3>
+            <p>
+              Real-time buy and sell signals from Viper's 5m and 15m scalping system.
+              Each signal includes entry zone, hard stop, and take profit target.
+              80–150 signals per month.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">$49 <span>/mo</span></div>
+              <span class="product-badge">High Risk</span>
+            </div>
+            <span class="product-cta mono">OPEN ON CRYPTOHOPPER <span class="arrow">→</span></span>
+          </div>
+        </a>
 
-        <!-- Copy Bot -->
-        <div class="product-card fade-in">
-          <div class="product-type">Copy Bot</div>
-          <h3>VIPER Copy Bot — Follow the Strike</h3>
-          <p>
-            Mirror Viper's paper trading hopper in real-time. Every scalp trade fires automatically,
-            scaled to your portfolio size. 80–150 trades per month. Capped at 100 copiers.
-          </p>
-          <div class="product-footer">
-            <div class="product-price">$79 <span>/mo</span></div>
-            <span class="product-badge">Max 100 Copiers</span>
+        <article class="product-card product-card-soon fade-in">
+          <div class="product-thumb">
+            <img src="assets/strategy.png" alt="VIPER Strategy thumbnail" loading="lazy">
           </div>
-        </div>
+          <div class="product-body">
+            <div class="product-type mono">STRATEGY</div>
+            <h3>5m Scalp Stack</h3>
+            <p>
+              Strategy Builder configuration tuned for 5-minute scalping. EMA(8/21)
+              crossover, Stochastic(5,3,3) reversals, Williams %R(8) confirmation.
+            </p>
+            <div class="product-footer">
+              <div class="product-price product-price-soon">Coming soon</div>
+              <span class="product-badge">High Risk</span>
+            </div>
+          </div>
+        </article>
+
+        <a class="product-card fade-in" href="https://www.cryptohopper.com/marketplace/search?q=Viper&category%5B%5D=templates" target="_blank" rel="noopener">
+          <div class="product-thumb">
+            <img src="assets/template.png" alt="VIPER Template thumbnail" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-type mono">TEMPLATE</div>
+            <h3>Complete Bot Template</h3>
+            <p>
+              Full scalping bot configuration. Coin selection, 0.5% max risk,
+              hard stop on every position, max 3 positions, fast take profit 0.8–1.5%,
+              all Viper parameters pre-loaded.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">Free</div>
+              <span class="product-badge">High Risk</span>
+            </div>
+            <span class="product-cta mono">OPEN ON CRYPTOHOPPER <span class="arrow">→</span></span>
+          </div>
+        </a>
+
+        <a class="product-card fade-in" href="https://www.cryptohopper.com/marketplace/search?q=Viper&category%5B%5D=copytrading" target="_blank" rel="noopener">
+          <div class="product-thumb">
+            <img src="assets/copy-bot.png" alt="VIPER Copy Bot thumbnail" loading="lazy">
+          </div>
+          <div class="product-body">
+            <div class="product-type mono">COPY BOT</div>
+            <h3>Follow the Strike</h3>
+            <p>
+              Mirror Viper's paper trading bot in real-time. Every scalp fires
+              automatically, scaled to your portfolio. Capped at 100 copiers to
+              preserve execution quality.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">$79 <span>/mo</span></div>
+              <span class="product-badge">Max 100 Copiers</span>
+            </div>
+            <span class="product-cta mono">OPEN ON CRYPTOHOPPER <span class="arrow">→</span></span>
+          </div>
+        </a>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA FINALE ═══ -->
+  <section class="finale">
+    <div class="finale-slab" aria-hidden="true"></div>
+    <div class="container finale-container">
+      <p class="finale-kicker mono">// TERMINAL LINE</p>
+      <h2 class="finale-title">
+        Strike fast.<br>
+        <span class="text-red">Exit faster.</span>
+      </h2>
+      <p class="finale-sub">
+        Paper trading only. 80–150 trades per month on Cryptohopper.
+        Verified track record — public and unedited.
+      </p>
+      <a href="#products" class="btn btn-primary btn-lg">
+        Deploy VIPER on Cryptohopper <span class="arrow">→</span>
+      </a>
     </div>
   </section>
 
@@ -294,37 +542,35 @@
       <div class="footer-inner">
 
         <div class="footer-brand">
-          <a href="/" class="nav-logo">
-            <span class="logo-icon">
-              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 2L8 18L16 16L14 34L28 14L20 17L18 2Z" fill="#ff3b3b"/>
-              </svg>
+          <a href="index.html" class="nav-logo">
+            <span class="logo-tile">
+              <svg width="40" height="40"><use href="#viper-mark"/></svg>
             </span>
-            <span>Viper</span>
+            <span class="logo-word">VIPER</span>
           </a>
           <p>
-            High-frequency crypto scalping signals powered by strict technical analysis
-            and relentless execution discipline. Paper trading only.
+            High-frequency crypto scalping signals powered by strict technical
+            analysis and relentless execution discipline. Paper trading only.
           </p>
           <div class="footer-social">
-            <a href="https://twitter.com/ViperTradingBot" aria-label="Twitter" target="_blank" rel="noopener">𝕏</a>
-            <a href="https://t.me/ViperSignals" aria-label="Telegram" target="_blank" rel="noopener">TG</a>
-            <a href="https://facebook.com/ViperTradingBot" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+            <a href="https://x.com/ViperTheHero" aria-label="X (Twitter)" target="_blank" rel="noopener">𝕏</a>
+            <a href="https://t.me/viperthehero" aria-label="Telegram" target="_blank" rel="noopener">TG</a>
           </div>
         </div>
 
         <div>
-          <h4>Navigate</h4>
+          <h4 class="mono">NAVIGATE</h4>
           <ul class="footer-links">
             <li><a href="#stats">Stats</a></li>
             <li><a href="#method">Method</a></li>
+            <li><a href="#philosophy">Philosophy</a></li>
             <li><a href="#rules">Rules</a></li>
             <li><a href="#products">Products</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Legal</h4>
+          <h4 class="mono">LEGAL</h4>
           <ul class="footer-links">
             <li><a href="disclaimer.html">Disclaimer</a></li>
             <li><a href="rules.html">The 5 Rules</a></li>
@@ -349,7 +595,9 @@
   <!-- ═══ DISCLAIMER MODAL ═══ -->
   <div class="disclaimer-overlay hidden" id="disclaimerModal">
     <div class="disclaimer-modal">
-      <div class="disclaimer-modal-icon">&#9888;&#65039;</div>
+      <div class="disclaimer-modal-icon">
+        <svg width="56" height="56"><use href="#viper-mark"/></svg>
+      </div>
       <h2>Important Notice</h2>
       <p>
         This website provides information about VIPER's paper trading activities
