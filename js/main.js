@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function animateCounter(el) {
     const target = el.getAttribute('data-target');
+    if (target === null) return; // live value already populated, skip animation
     const prefix = el.getAttribute('data-prefix') || '';
     const suffix = el.getAttribute('data-suffix') || '';
 
