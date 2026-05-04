@@ -89,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const startTime = performance.now();
 
     function update(currentTime) {
+      // Bail mid-animation if a live value has overwritten the static target.
+      if (el.getAttribute('data-target') === null) return;
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);

@@ -39,12 +39,28 @@
     });
   }
 
+  // The signaller fires the same logical trade across every exchange it
+  // supports, so the API returns ~N duplicates per trade. Dedupe by
+  // (coin, exit_time bucketed to 30 minutes) and keep the first occurrence.
+  function dedupeTrades(trades) {
+    const seen = new Set();
+    const out = [];
+    for (const t of trades) {
+      const bucket = Math.floor((t.exit_time || 0) / 1800);
+      const key = `${t.coin}|${bucket}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push(t);
+    }
+    return out;
+  }
+
   function renderTrades(trades) {
     const wrap = document.querySelector('[data-metric="recent_trades"]');
     if (!wrap || !trades || !trades.length) return;
     const tbody = wrap.querySelector('tbody');
     if (!tbody) return;
-    tbody.innerHTML = trades
+    tbody.innerHTML = dedupeTrades(trades)
       .slice(0, 8)
       .map((t) => {
         const win = (t.result_pct || 0) >= 0;
